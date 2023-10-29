@@ -49,7 +49,7 @@ class DeliveryTest {
     @DisplayName("Should Test Blank Phone")
     void shouldTestBlankPhone() {
         var validUser = DataGenerator.Registration.generateUser("ru");
-        var daysToAddForFirstMeeting = 4;
+        var daysToAddForFirstMeeting = 800;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);
         var daysToAddForSecondMeeting = 7;
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting);
@@ -106,7 +106,7 @@ class DeliveryTest {
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting);
         $("[placeholder=\"Город\"]").setValue(validUser.getCity());
         $("[placeholder=\"Дата встречи\"]").doubleClick().sendKeys(firstMeetingDate);
-        $("[data-test-id=\"name\"] input.input__control").setValue(validUser.getName() + " Алёшин");
+        $("[data-test-id=\"name\"] input.input__control").setValue(validUser.getName() + " Алешин");
         $("[name=\"phone\"]").setValue(validUser.getPhone());
         $("[data-test-id=\"agreement\"] .checkbox__box").click();
         $("[type=button] .button__text").click();
