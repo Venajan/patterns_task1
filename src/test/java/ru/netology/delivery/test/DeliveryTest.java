@@ -106,7 +106,7 @@ class DeliveryTest {
         var secondMeetingDate = DataGenerator.generateDate(daysToAddForSecondMeeting);
         $("[placeholder=\"Город\"]").setValue(validUser.getCity());
         $("[placeholder=\"Дата встречи\"]").doubleClick().sendKeys(firstMeetingDate);
-        $("[data-test-id=\"name\"] input.input__control").setValue(validUser.getName() + " Алешин");
+        $("[data-test-id=\"name\"] input.input__control").setValue(validUser.getName() + " Алёшин");
         $("[name=\"phone\"]").setValue(validUser.getPhone());
         $("[data-test-id=\"agreement\"] .checkbox__box").click();
         $("[type=button] .button__text").click();
